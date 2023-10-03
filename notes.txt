@@ -1,0 +1,31 @@
+- added script devStart in package.json to start the server
+- no route to find for index, so shows Cannot GET /
+- downloaded ejs extension for proper syntax highlighting in .ejs files
+- to create boiler plate html using ! + ENTR
+- can use button:sub + ENTR to auto complete submit button syntax
+    - at this point, have a form that doesnt work that takes in a URL --> this is bc no backend!
+    - typing in https://google.com results in a redirect to error: Cannot POST/
+    - no backend + form action is POST, but nowhere to post, so no work
+    - POST is a request from front. GET is also a request
+    - recall that we make http requests from the frontend to the server
+    - https://stackoverflow.com/questions/47881699/what-are-the-ways-to-send-normal-http-requests-from-the-front-end
+- created a table, tr for row, thead for header row, th for headers, 
+    tbody for body, td for data cell (created a dummy row to show table)
+- inlcuded bootstrap instead of styling it ourselves with CSS, use CDN to use instead of local download w npm install
+    - <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> into <head>
+    - wrapped everything in bootstrap class container
+    - adding class my-4 to form added margins
+        - bootstrap format is {property}{sides}-{size} 
+            - m = margin, y = top and bottom, 4 = set to $spacer *1.5
+    - also added form-inline to classes, so form is inline when we start applying other classes
+    - added class sr-only to label fullUrl so makes element only visible to screen readers
+    - added margins to other elements, added col to input so it takes up column
+    - added styling to table (table-responsive for scrolling and table-striped for coloring)
+- added action to form (/shortUrls, the endpoint we will be POSTing to)
+
+BEYOND THE TUTORIAL
+- tried to add a button on the bottom of the page, but page only renders once
+- this is why opening shortUrl in new tab doesnt update clicks until after refresh
+- added a "button" (actually a link) in the row of the table to redirect to an endpoint edit 
+    - this actually deletes that url from the db using deleteOne
+    - simulates refresh by redirecting to home page
